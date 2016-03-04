@@ -1,17 +1,5 @@
-module.exports = function(app) {
-  app.dataSources.books.automigrate('books', function(err) {
-    if (err) throw err;
- 
-    app.models.books.create([
-      {name: 'Advantage India', price: '120', release_date: "11/11/2015"},
-      {name: 'Cometh The Hour ', price: '180', release_date: "10/10/2015"},
-      {name: 'Our Impossible Love ', price: '140', release_date: "12/12/2015"},
-    ], function(err, books) {
-      if (err) throw err;
- 
-      console.log('Models created: \n', books);
-    });
-  });
+/*module.exports = function(app) {
+
   app.dataSources.author.automigrate('author', function(err) {
     if (err) throw err;
  
@@ -25,10 +13,25 @@ module.exports = function(app) {
       console.log('Models created: \n', author);
     });
   });
-};
+  
+  app.dataSources.books.automigrate('books', function(err) {
+    if (err) throw err;
+ 
+    app.models.books.create([
+      {name: 'Advantage India', price: '120', release_date: "11/11/2015"},
+      {name: 'Cometh The Hour ', price: '180', release_date: "10/10/2015"},
+      {name: 'Our Impossible Love ', price: '140', release_date: "12/12/2015"},
+    ], function(err, books) {
+      if (err) throw err;
+ 
+      console.log('Models created: \n', books);
+    });
+  });
+
+};*/
 
 
-/*var async = require('async');
+var async = require('async');
 
 module.exports = function(app) {
   // data sources
@@ -68,4 +71,4 @@ module.exports = function(app) {
   }
 
 
-};*/
+};
